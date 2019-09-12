@@ -1,0 +1,368 @@
+var  loginVip=document.getElementById("loginVip");
+var phonelogin=document.getElementById("phonelogin");
+var register=document.getElementById("register");
+var iphoneinput=document.getElementById("iphone-input");
+var zhuceinput=document.getElementById("zhuce-input");
+var logincloseBtn=document.getElementById("logincloseBtn");
+var registerclosebtn=document.getElementById("registerclosebtn");
+var returnregister=document.getElementById("returnregister");
+var returnlogin=document.getElementById("returnlogin")
+
+iphoneinput.onclick=function () {
+    loginVip.style.display="none";
+    register.style.display="none";
+    phonelogin.style.display="block";
+}
+
+zhuceinput.onclick=function () {
+    loginVip.style.display="none";
+    register.style.display="block";
+    phonelogin.style.display="none";
+}
+
+registerclosebtn.onclick=function () {
+    loginVip.style.display="none";
+    register.style.display="none";
+    phonelogin.style.display="none";
+}
+
+logincloseBtn.onclick=function () {
+    loginVip.style.display="none";
+    register.style.display="none";
+    phonelogin.style.display="none";
+}
+
+returnlogin.onclick=function () {
+    loginVip.style.display="block";
+    register.style.display="none";
+    phonelogin.style.display="none";
+}
+
+returnregister.onclick=function () {
+    loginVip.style.display="block";
+    register.style.display="none";
+    phonelogin.style.display="none";
+}
+
+var error1=document.getElementById("error1");//账号错误
+var error2=document.getElementById("error2");//密码错误
+var error3=document.getElementById("error3");//账号错误
+var error4=document.getElementById("error4");//密码错误
+var error5=document.getElementById("error5");//密码错误
+
+
+//登入框
+$('#loginbnt').click(function () {
+    var userId = $("input[name='userId']").val();
+    var userPassword = $('input[name=userPassword]').val();
+    if(!(/^1(3|4|5|6|7|8|9)\d{9}$/.test(userId))){
+        error1.style.display="block";
+        return false;
+    }else {
+        $.ajax({
+            url:"login",
+            data:{'userId':userId,"userPassword":userPassword},
+            type:"post",
+            datatype:"json",
+            success:function (result) {
+                if(result!= null && result != ""){
+                    alert("成功登录");
+                    window.location.reload();
+                }else {
+                    error2.style.display="block";
+                }
+            }
+        })
+    }
+})
+
+//注册框
+$('#registerbtn').click(function () {
+
+    var userId = $('#registerId').val();
+    var userPassword = $('#registerPwd').val();
+    alert(userId+userPassword);
+    if(!(/^1(3|4|5|6|7|8|9)\d{9}$/.test(userId))){
+        error3.style.display="block";
+        return false;
+    }else if(!(/^[0-9A-Za-z]{6,}$/.test(userPassword))) {
+        error4.style.display="block";
+    }else {
+        $.ajax({
+            url:"register",
+            data:{'userId':userId,"userPassword":userPassword},
+            type:"post",
+            datatype:"json",
+            success:function (result) {
+                alert("doregister");
+                if(result!= null && result != ""){
+                    alert("注册成功");
+                }else {
+                    alert("fail");
+                    error5.style.display="block";
+                }
+            }
+        })
+    }
+})
+
+$('#userId').click(function ( ) {
+    error2.style.display="none";
+    error1.style.display="none";
+})//用户输入框错误提示消失
+
+$('#registerId').click(function ( ) {
+    error3.style.display="none";
+})//用户注册输入框错误提示消失
+
+$('#registerPwd').click(function ( ) {
+    error4.style.display="none";
+})//用户注册密码输入框错误提示消失
+
+
+//我的歌手
+$("#mysinger-bnt").click(function () {
+    $("#mysonglist").css("display","none");
+    $("#mysinger").css("display","block");
+})
+
+//我创建的歌单
+$(".data").click(function () {
+    $("#mysonglist").css("display","block");
+    $("#mysinger").css("display","none");
+})
+
+// //我收藏的歌单
+// $("#mycollectionesonglist").click(function () {
+//     $("#mysonglist").css("display","block");
+//     $("#mysinger").css("display","none");
+// })
+
+//删除图标移入移出事件
+$(".create ul li").mouseenter(function () {
+    $(this).find(".delete").show();
+    $(this).find(".delete2").show();
+})
+$(".create ul li").mouseleave(function () {
+    $(this).find(".delete").hide();
+    $(this).find(".delete2").hide();
+})
+
+//删除创建的歌单
+$(".delete").click(function () {
+    var msg = "确定删除此歌单吗？";
+    if (confirm(msg)==true){
+        alert($(this).attr("del-id"));
+        var songlistId=$(this).attr("del-id");
+        $.ajax({
+            url:"deleteMycreatSl",
+            data:{'songlistId':songlistId},
+            type:"get",
+            datatype:"json",
+            success:function (result) {
+                alert("dodeletesong");
+                if(result.code==100){
+                    BuildCreation(result);
+                }else if(result.code==200){
+                    alert("未知错误，删除失败")
+                }
+            }
+        })
+    }else{
+        return false;
+    }
+    // alert($(this).attr("del-id"));
+})
+
+function BuildCreation(result){
+    alert("doBuild");
+    $("#mycreatesonglist").empty();
+    var songlists = result.extend.songlists;
+    $.each(songlists,function (index,songlist) {
+        $("#mycreatesonglist").append("<li >\n" +
+            " <div class=\"data\" >\n" +
+            "       <div class=\"left\" >\n" +
+            "           <a href=\"mymusicplay?songlistId="+songlist.songlistId+"\" ><img src=\""+songlist.songlistUrl+"\"></a>\n" +
+            "       </div>\n" +
+            "       <p><a href=\"mymusicplay?songlistId="+songlist.songlistId+"\">"+songlist.songlistName+"</a></p>\n" +
+            "        <p>收藏"+songlist.collectionCount+"次\n" +
+            "           <span class=\"delete\" style=\"display: none\" del-id="+songlist.songlistId+">\n" +
+            "           <a><img src=\"img/Myimg/Smallicon/delete.jpg\"></a>\n" +
+            "           </span>\n" +
+            "       </p>\n" +
+            "</div>\n" +
+            "  </li>");
+
+    })
+    window.location.reload();
+}
+//歌曲删除图标移入移出是事件
+$(".even").mouseenter(function () {
+    $(this).find(".deleteSong").show();
+})
+$(".even").mouseleave(function () {
+    $(this).find(".deleteSong").hide();
+})
+
+
+//删除创建的歌单歌曲
+$(".deleteSong").click(function () {
+    var msg = "确定删除此歌曲吗？";
+    if (confirm(msg)==true) {
+        alert($(this).attr("dele-id"));
+        var songId=$(this).attr("dele-id");
+        $.ajax({
+            url:"deleteSong",
+            data:{'songId':songId},
+            type:"get",
+            datatype:"json",
+            success:function (result) {
+                if(result.code==100){
+                    BuildSongVos(result);
+                    window.location.reload();
+                }else if(result.code==200){
+                    alert(result.msg);
+                }
+            }
+        })
+    }
+})
+
+// 删除歌单歌曲后构建函数
+function BuildSongVos(result) {
+    alert("doBuildSongVos");
+    $(".musicrank table").empty();
+    var songVos=result.extend.songVos;
+    $("#playsongtable").append("<tr>\n" +
+        "                            <th class=\"first1\" style=\"border: 1px solid #ccc;\">\n" +
+        "                                <div class=\"\"></div>\n" +
+        "                            </th>\n" +
+        "                            <th class=\"first2\" style=\"border: 1px solid #ccc;\">\n" +
+        "                                <div class=\"\">歌曲标题</div>\n" +
+        "                            </th>\n" +
+        "                            <th class=\"first3\" style=\"border: 1px solid #ccc;\">\n" +
+        "                                <div class=\"\">时长</div>\n" +
+        "                            </th>\n" +
+        "                            <th class=\"first4\" style=\"border: 1px solid #ccc;\">\n" +
+        "                                <div class=\"\">歌手</div>\n" +
+        "                            </th>\n" +
+        "                            <th class=\"first5\" style=\"border: 1px solid #ccc;\">\n" +
+        "                                <div class=\"\">专辑</div>\n" +
+        "                            </th>\n" +
+        "                        </tr>")
+    $.each(songVos,function (index,songVo){
+        $("#playsongtable").append(" <tr class=\"even\">\n" +
+            "                                <td>\n" +
+            "                                    <div class=\"hd\">\n" +
+            "                                        <span class=\"palybnt\"></span>\n" +
+            "                                        <span class=\"num\">"+index+1+"</span>\n" +
+            "                                    </div></td>\n" +
+            "                                <td>\n" +
+            "                                    <div class=\"songtitle\">\n" +
+            "                                        <a href=\"singlesong?songId=+"+songVo.song.songId+"\">"+songVo.song.songName+"</a>\n" +
+            "                                    </div>\n" +
+            "                                </td>\n" +
+            "                                <td>\n" +
+            "                                    <div class=\"songtime\">\n" +
+            "                                        <a>"+songVo.song.songTime+"</a>\n" +
+            "                                    </div>\n" +
+            "                                </td>\n" +
+            "                                <td>\n" +
+            "                                    <div class=\"singer\">\n" +
+            "                                        <a href=\"singlesinger?singerId="+songVo.song.singerId+"\">"+songVo.singerName+"</a>\n" +
+            "                                    </div>\n" +
+            "                                </td>\n" +
+            "                                <td>\n" +
+            "                                    <div class=\"cd\">\n" +
+            "                                        <a href=\"cd?cdId="+songVo.song.cdId+"\">"+songVo.cdName+"</a>\n" +
+            // "                                        <c:if test=\""+${user.userId==playlist.songlist.userId}+"\">\n" +
+            // "                                            <div class=\"deleteSong\" dele-id=\"+"songVo.song.songId+"\" style=\"display: none\">\n" +
+            // "                                                <a><img src=\"img/Myimg/Smallicon/delete.jpg\" ></a>\n" +
+            // "                                            </div>\n" +
+            // "                                        </c:if>\n" +
+            "                                    </div>\n" +
+            "                                </td>\n" +
+            "                            </tr>");
+    })
+}
+
+//创建新歌单
+$("#creatnew").click(function () {
+    var songlistname=$("#songlistname").val();
+    if(songlistname==null||songlistname==""){
+        alert("歌单名不能为空");
+    }else {
+        $.ajax({
+            url:"addsonglist",
+            type:"get",
+            data:{"songlistName":songlistname},
+            datatype:"json",
+            success:function (result) {
+                if(result.code==100){
+                    BuildCreation(result);
+                    $("#myModal").modal('hide');
+                }else if(result.code==200){
+                    alert("未知错误，稍后重试");
+                    $("#myModal").modal('hide');
+                }
+            }
+        })
+    }
+})
+
+//删除收藏的歌单
+$(".delete2").click(function () {
+    var msg = "确定删除此歌单吗？";
+    if (confirm(msg)==true){
+        alert($(this).attr("del-id"));
+        var songlistId=$(this).attr("del-id");
+        $.ajax({
+            url:"deleteMycollectioneSl",
+            data:{'songlistId':songlistId},
+            type:"get",
+            datatype:"json",
+            success:function (result) {
+                alert("dodeletesong");
+                if(result.code==100){
+                    BuildCollectione(result);
+                }else if(result.code==200){
+                    alert("未知错误，删除失败")
+                }
+            }
+        })
+    }else{
+        return false;
+    }
+    // alert($(this).attr("del-id"));
+})
+
+//构建收藏列表
+function BuildCollectione(result) {
+    alert("doBuild");
+    $("#mycollectionesonglist").empty();
+    var songlists = result.extend.songlists;
+    $.each(songlists,function (index,songlist) {
+        $("#mycollectionesonglist").append("<li >\n" +
+            " <div class=\"data\" >\n" +
+            "       <div class=\"left\" >\n" +
+            "           <a href=\"mymusicplay?songlistId="+songlist.songlistId+"\" ><img src=\""+songlist.songlistUrl+"\"></a>\n" +
+            "       </div>\n" +
+            "       <p><a href=\"mymusicplay?songlistId="+songlist.songlistId+"\">"+songlist.songlistName+"</a></p>\n" +
+            "        <p>收藏"+songlist.collectionCount+"次\n" +
+            "           <span class=\"delete\" style=\"display: none\" del-id="+songlist.songlistId+">\n" +
+            "           <a><img src=\"img/Myimg/Smallicon/delete.jpg\"></a>\n" +
+            "           </span>\n" +
+            "       </p>\n" +
+            "</div>\n" +
+            "  </li>");
+
+    })
+    window.location.reload();
+}
+
+
+
+
+
+
+

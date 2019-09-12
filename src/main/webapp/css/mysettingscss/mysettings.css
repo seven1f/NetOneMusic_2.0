@@ -1,0 +1,106 @@
+.section2{
+    width: 100%;
+    height: auto;
+    background: #f5f5f5;
+}
+.wrap2{
+    background: #fff;
+    width: 982px;
+    height:700px;
+    margin: 0 auto;
+    border: 1px solid #d3d3d3;
+    border-top: none;
+    overflow:hidden;
+}
+.wrap22{
+    width: 980px;
+}
+.main{
+    padding: 40px 40px 40px 40px ;
+    float: right;
+    width: 982px;
+}
+.mainh{
+    margin-top: 0px;
+    height: 53px;
+    padding: 10px 0px;
+    border-bottom: 2px solid #c10d0c;
+    font-size: 25px;
+    color: #1a1a1a;
+}
+.left{
+    float: left;
+    margin-right: 30px;
+}
+.right{
+    float: left;
+    width: 140px;
+    font-size: 15px;
+}
+.right img{
+    width: 140px;
+    height: 140px;
+    border: 1px solid gainsboro;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.update_data{
+    width: 900px;
+    margin-top: 30px;
+}
+.lab{
+    float: left;
+    font-size: 15px;
+    color:#555555db;
+}
+.userNameInput{
+    margin-bottom: 10px;
+}
+.userName{
+    width: 314px;
+    height: 30px;
+    padding: 5px 6px 6px 6px;
+    border:1px solid grey;
+}
+.error1{
+    margin-left: 50px;
+    font-size: 20px;
+    margin-top: 10px;
+    color: red;
+    display: none;
+}
+.userSignInput{
+    margin-bottom: 10px;
+}
+.userSign{
+    padding: 5px 6px 6px 6px;
+    width: 315px;
+    height: 136px;
+    border:1px solid grey;
+    margin-right: -20px;
+    resize: none;
+}
+.userSexInput{
+    margin-bottom: 10px;
+}
+.userSexInput.checkbox{
+    margin-left: 10px;
+}
+.userBirthdayInput{
+    margin-bottom: 10px;
+}
+.userBirthday{
+    width: 100px;
+    height: 30px;
+    padding: 5px 6px 6px 6px;
+    border:1px solid grey;
+}
+.userAreaInput{
+    margin-bottom: 10px;
+}
+.userArea{
+    width: 150px;
+    height: 30px;
+    padding: 5px 6px 6px 6px;
+    border:1px solid grey;
+}

@@ -1,0 +1,152 @@
+/* 左边歌手类目制作 */
+.singer-box{
+    margin: 0 auto;
+    width: 980px;
+    height: 1000px;
+    border:1px solid #d3d3d3;
+}
+
+.singer-left{
+    float: left;
+    width: 180px;
+    height: 1000px;
+    border-right: 1px solid #d3d3d3;
+
+}
+
+.singer-left li{
+    width: 135px;
+    height: 29px;
+    line-height: 29px;
+    cursor: pointer;
+}
+.singer-left li.singer-tj{
+    margin-top: 30px;
+}
+.singer-left li span.singer-zi{
+    height: 29px;
+    font-weight: 900;
+    margin-top: 30px;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";
+}
+.singer-left li span.singer-dot{
+    display: inline-block;
+    line-height: 29px;
+    width: 4px;
+    height: 4px;
+    background: #333;
+}
+.singer-left li a{
+    width: 150px;
+    padding-left: 7px;
+    color: #333;
+}
+.singer-left li a:hover{
+    text-decoration: underline;
+}
+.singer-left ul.singer-catalog{
+    margin-left: 14px;
+    width: 135px;
+    height: 160px;
+    border-top: 1px solid #d3d3d3;
+}
+.singer-left ul.singer-catalog-one{
+    margin-left: 14px;
+    width: 135px;
+    height: 90px;
+    margin-bottom: 10px;
+}
+.singer-left li.singer-title{
+    margin-top: 30px;
+}
+
+/* 右边 */
+/* 入驻歌手制作 */
+.singer-right{
+    float: left;
+    width: 799px;
+    height: 1000px;
+}
+
+.mainh{
+    margin-top: 0px;
+    height: 53px;
+    padding: 10px 0px;
+    border-bottom: 2px solid #c10d0c;
+    font-size: 25px;
+    color: #1a1a1a;
+}
+.lilogo{
+    float: left;
+    padding: 0;
+    margin: 25px 0 0px 0;
+}
+.lilogo a {
+    font: 24px "宋体";
+    color: #000;
+    margin: 0 6px 0 0;
+}
+.singer-data{
+    padding: 10px 40px 40px 40px;
+}
+.singer-data .filter{
+    height: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.filter li {
+    margin-left: 3px;
+    width: 21px;
+    height: 24px;
+    float: left;
+}
+.filter li a{
+    color: #333;
+    font-size: 14px;
+    width: 21px;
+    height: 24px;
+}
+.m-sgerlist {
+    width: 736px;
+    height: 368px;
+    margin-top: 20px;
+    margin-left: -17px;
+    border-bottom:1px dashed #333;
+    margin-bottom: 15px;
+}
+.m-sgerlist  li{
+    float: left;
+    width: 130px;
+    height: 154px;
+    padding: 0px 0px 30px 17px;
+}
+.singer-img img{
+    width: 130px;
+    height: 130px;
+}
+.m-sgerlist li p{
+    width: 36px;
+    height: 16px;
+    font-size: 12px;
+    float: left;
+    margin-top: 8px;
+}
+.m-sgerlist-end {
+    width: 736px;
+    height: 368px;
+    margin-top: 20px;
+    margin-left: -17px;
+    margin-bottom: 15px;
+}
+.m-sgerlist-end li{
+    float: left;
+    width: 130px;
+    height: 30px;
+    padding-left: 17px;
+}
+.m-sgerlist-end li a{
+    font-size: 12px;
+}
+
+

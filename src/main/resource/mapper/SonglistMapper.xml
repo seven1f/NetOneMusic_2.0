@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="netonemusic.com.dao.SonglistMapper">
+  <resultMap id="BaseResultMap" type="netonemusic.com.entity.Songlist">
+    <!--@mbg.generated-->
+    <id column="songList_id" jdbcType="INTEGER" property="songlistId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="songList_name" jdbcType="VARCHAR" property="songlistName" />
+    <result column="songList_type" jdbcType="VARCHAR" property="songlistType" />
+    <result column="songList_introduce" jdbcType="VARCHAR" property="songlistIntroduce" />
+    <result column="creation_date" jdbcType="DATE" property="creationDate" />
+    <result column="songList_url" jdbcType="VARCHAR" property="songlistUrl" />
+    <result column="comment_count" jdbcType="INTEGER" property="commentCount" />
+    <result column="collection_count" jdbcType="INTEGER" property="collectionCount" />
+    <result column="songList_tags" jdbcType="VARCHAR" property="songlistTags" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    songList_id, user_id, songList_name, songList_type, songList_introduce, creation_date, 
+    songList_url, comment_count, collection_count, songList_tags
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from songlist
+    where songList_id = #{songlistId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from songlist
+    where songList_id = #{songlistId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="songList_id" keyProperty="songlistId" parameterType="netonemusic.com.entity.Songlist" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into songlist (user_id, songList_name, songList_type, 
+      songList_introduce, creation_date, songList_url, 
+      comment_count, collection_count, songList_tags
+      )
+    values (#{userId,jdbcType=VARCHAR}, #{songlistName,jdbcType=VARCHAR}, #{songlistType,jdbcType=VARCHAR}, 
+      #{songlistIntroduce,jdbcType=VARCHAR}, #{creationDate,jdbcType=DATE}, #{songlistUrl,jdbcType=VARCHAR}, 
+      #{commentCount,jdbcType=INTEGER}, #{collectionCount,jdbcType=INTEGER}, #{songlistTags,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="songList_id" keyProperty="songlistId" parameterType="netonemusic.com.entity.Songlist" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into songlist
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="songlistName != null">
+        songList_name,
+      </if>
+      <if test="songlistType != null">
+        songList_type,
+      </if>
+      <if test="songlistIntroduce != null">
+        songList_introduce,
+      </if>
+      <if test="creationDate != null">
+        creation_date,
+      </if>
+      <if test="songlistUrl != null">
+        songList_url,
+      </if>
+      <if test="commentCount != null">
+        comment_count,
+      </if>
+      <if test="collectionCount != null">
+        collection_count,
+      </if>
+      <if test="songlistTags != null">
+        songList_tags,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="songlistName != null">
+        #{songlistName,jdbcType=VARCHAR},
+      </if>
+      <if test="songlistType != null">
+        #{songlistType,jdbcType=VARCHAR},
+      </if>
+      <if test="songlistIntroduce != null">
+        #{songlistIntroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="creationDate != null">
+        #{creationDate,jdbcType=DATE},
+      </if>
+      <if test="songlistUrl != null">
+        #{songlistUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="commentCount != null">
+        #{commentCount,jdbcType=INTEGER},
+      </if>
+      <if test="collectionCount != null">
+        #{collectionCount,jdbcType=INTEGER},
+      </if>
+      <if test="songlistTags != null">
+        #{songlistTags,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="netonemusic.com.entity.Songlist">
+    <!--@mbg.generated-->
+    update songlist
+    <set>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=VARCHAR},
+      </if>
+      <if test="songlistName != null">
+        songList_name = #{songlistName,jdbcType=VARCHAR},
+      </if>
+      <if test="songlistType != null">
+        songList_type = #{songlistType,jdbcType=VARCHAR},
+      </if>
+      <if test="songlistIntroduce != null">
+        songList_introduce = #{songlistIntroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="creationDate != null">
+        creation_date = #{creationDate,jdbcType=DATE},
+      </if>
+      <if test="songlistUrl != null">
+        songList_url = #{songlistUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="commentCount != null">
+        comment_count = #{commentCount,jdbcType=INTEGER},
+      </if>
+      <if test="collectionCount != null">
+        collection_count = #{collectionCount,jdbcType=INTEGER},
+      </if>
+      <if test="songlistTags != null">
+        songList_tags = #{songlistTags,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where songList_id = #{songlistId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="netonemusic.com.entity.Songlist">
+    <!--@mbg.generated-->
+    update songlist
+    set user_id = #{userId,jdbcType=VARCHAR},
+      songList_name = #{songlistName,jdbcType=VARCHAR},
+      songList_type = #{songlistType,jdbcType=VARCHAR},
+      songList_introduce = #{songlistIntroduce,jdbcType=VARCHAR},
+      creation_date = #{creationDate,jdbcType=DATE},
+      songList_url = #{songlistUrl,jdbcType=VARCHAR},
+      comment_count = #{commentCount,jdbcType=INTEGER},
+      collection_count = #{collectionCount,jdbcType=INTEGER},
+      songList_tags = #{songlistTags,jdbcType=VARCHAR}
+    where songList_id = #{songlistId,jdbcType=INTEGER}
+  </update>
+
+<!--auto generated by MybatisCodeHelper on 2019-08-29-->
+  <select id="findAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from songlist
+  </select>
+
+<!--auto generated by MybatisCodeHelper on 2019-09-02-->
+  <select id="findAllByUserId" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from songlist
+        where 1=1
+        <if test="userId != null">
+            and user_id=#{userId,jdbcType=VARCHAR}
+        </if>
+    </select>
+  <select id="findAllCollection" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+   from songlist
+   where songList_id in(select songList_id from userwithsonglist where user_id=#{userId,jdbcType=VARCHAR})
+  </select>
+    <select id="searchSonglist" resultMap="BaseResultMap">
+      select
+      <include refid="Base_Column_List"/>
+      from songlist where songList_name like '%${Keyword}%'
+    </select>
+
+<!--auto generated by MybatisCodeHelper on 2019-09-05-->
+  <select id="findBySonglistNameAndUserId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from songlist
+    where songList_name=#{songlistName,jdbcType=VARCHAR} and user_id=#{userId,jdbcType=VARCHAR}
+  </select>
+
+<!--auto generated by MybatisCodeHelper on 2019-09-05-->
+  <delete id="deleteBySonglistIdAndUserId">
+    delete from songlist
+    where 1=1
+    <if test="songlistId != null">
+      and songList_id=#{songlistId,jdbcType=INTEGER}
+    </if>
+    <if test="userId != null">
+      and user_id=#{userId,jdbcType=VARCHAR}
+    </if>
+  </delete>
+
+  <delete id="deleteMyCollectionBySonglistIdAndUserId">
+    delete from userwithsonglist
+    where songList_id=#{songlistId,jdbcType=INTEGER} and user_id=#{userId,jdbcType=VARCHAR}
+  </delete>
+    <!--<insert id="addSongtoSonglist" keyColumn="sl_song_id">-->
+      <!--insert into songlistwithsong (songList_id,song_id) value-->
+      <!--(#{songlistId,jdbcType=INTEGER},#{songId,jdbcType=INTEGER})-->
+    <!--</insert>-->
+
+</mapper>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="netonemusic.com.dao.SingerMapper">
+  <resultMap id="BaseResultMap" type="netonemusic.com.entity.Singer">
+    <!--@mbg.generated-->
+    <id column="singer_id" jdbcType="INTEGER" property="singerId" />
+    <result column="singer_name" jdbcType="VARCHAR" property="singerName" />
+    <result column="singer_area" jdbcType="VARCHAR" property="singerArea" />
+    <result column="singer_sex" jdbcType="VARCHAR" property="singerSex" />
+    <result column="singer_birthday" jdbcType="DATE" property="singerBirthday" />
+    <result column="singer_avatar" jdbcType="VARCHAR" property="singerAvatar" />
+    <result column="singer_status" jdbcType="INTEGER" property="singerStatus" />
+    <result column="singer_introduce" jdbcType="VARCHAR" property="singerIntroduce" />
+    <result column="access_count" jdbcType="INTEGER" property="accessCount" />
+    <result column="singer_type" jdbcType="VARCHAR" property="singerType" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    singer_id, singer_name, singer_area, singer_sex, singer_birthday, singer_avatar, 
+    singer_status, singer_introduce, access_count, singer_type
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from singer
+    where singer_id = #{singerId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from singer
+    where singer_id = #{singerId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="singer_id" keyProperty="singerId" parameterType="netonemusic.com.entity.Singer" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into singer (singer_name, singer_area, singer_sex, 
+      singer_birthday, singer_avatar, singer_status, 
+      singer_introduce, access_count, singer_type
+      )
+    values (#{singerName,jdbcType=VARCHAR}, #{singerArea,jdbcType=VARCHAR}, #{singerSex,jdbcType=VARCHAR}, 
+      #{singerBirthday,jdbcType=DATE}, #{singerAvatar,jdbcType=VARCHAR}, #{singerStatus,jdbcType=INTEGER}, 
+      #{singerIntroduce,jdbcType=VARCHAR}, #{accessCount,jdbcType=INTEGER}, #{singerType,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="singer_id" keyProperty="singerId" parameterType="netonemusic.com.entity.Singer" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into singer
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="singerName != null">
+        singer_name,
+      </if>
+      <if test="singerArea != null">
+        singer_area,
+      </if>
+      <if test="singerSex != null">
+        singer_sex,
+      </if>
+      <if test="singerBirthday != null">
+        singer_birthday,
+      </if>
+      <if test="singerAvatar != null">
+        singer_avatar,
+      </if>
+      <if test="singerStatus != null">
+        singer_status,
+      </if>
+      <if test="singerIntroduce != null">
+        singer_introduce,
+      </if>
+      <if test="accessCount != null">
+        access_count,
+      </if>
+      <if test="singerType != null">
+        singer_type,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="singerName != null">
+        #{singerName,jdbcType=VARCHAR},
+      </if>
+      <if test="singerArea != null">
+        #{singerArea,jdbcType=VARCHAR},
+      </if>
+      <if test="singerSex != null">
+        #{singerSex,jdbcType=VARCHAR},
+      </if>
+      <if test="singerBirthday != null">
+        #{singerBirthday,jdbcType=DATE},
+      </if>
+      <if test="singerAvatar != null">
+        #{singerAvatar,jdbcType=VARCHAR},
+      </if>
+      <if test="singerStatus != null">
+        #{singerStatus,jdbcType=INTEGER},
+      </if>
+      <if test="singerIntroduce != null">
+        #{singerIntroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="accessCount != null">
+        #{accessCount,jdbcType=INTEGER},
+      </if>
+      <if test="singerType != null">
+        #{singerType,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="netonemusic.com.entity.Singer">
+    <!--@mbg.generated-->
+    update singer
+    <set>
+      <if test="singerName != null">
+        singer_name = #{singerName,jdbcType=VARCHAR},
+      </if>
+      <if test="singerArea != null">
+        singer_area = #{singerArea,jdbcType=VARCHAR},
+      </if>
+      <if test="singerSex != null">
+        singer_sex = #{singerSex,jdbcType=VARCHAR},
+      </if>
+      <if test="singerBirthday != null">
+        singer_birthday = #{singerBirthday,jdbcType=DATE},
+      </if>
+      <if test="singerAvatar != null">
+        singer_avatar = #{singerAvatar,jdbcType=VARCHAR},
+      </if>
+      <if test="singerStatus != null">
+        singer_status = #{singerStatus,jdbcType=INTEGER},
+      </if>
+      <if test="singerIntroduce != null">
+        singer_introduce = #{singerIntroduce,jdbcType=VARCHAR},
+      </if>
+      <if test="accessCount != null">
+        access_count = #{accessCount,jdbcType=INTEGER},
+      </if>
+      <if test="singerType != null">
+        singer_type = #{singerType,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where singer_id = #{singerId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="netonemusic.com.entity.Singer">
+    <!--@mbg.generated-->
+    update singer
+    set singer_name = #{singerName,jdbcType=VARCHAR},
+      singer_area = #{singerArea,jdbcType=VARCHAR},
+      singer_sex = #{singerSex,jdbcType=VARCHAR},
+      singer_birthday = #{singerBirthday,jdbcType=DATE},
+      singer_avatar = #{singerAvatar,jdbcType=VARCHAR},
+      singer_status = #{singerStatus,jdbcType=INTEGER},
+      singer_introduce = #{singerIntroduce,jdbcType=VARCHAR},
+      access_count = #{accessCount,jdbcType=INTEGER},
+      singer_type = #{singerType,jdbcType=VARCHAR}
+    where singer_id = #{singerId,jdbcType=INTEGER}
+  </update>
+
+<!--auto generated by MybatisCodeHelper on 2019-08-29-->
+  <select id="findAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from singer
+    </select>
+
+
+<!--auto generated by MybatisCodeHelper on 2019-08-29-->
+  <select id="findFirst10OrderByAccessCountDesc" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from singer order by access_count desc limit 10
+  </select>
+
+<!--&amp;amp;lt;!&amp;amp;ndash;auto generated by MybatisCodeHelper on 2019-08-29&amp;amp;ndash;&amp;amp;gt;-->
+  <!--&amp;lt;select id="findBySingerStatusOrderByAccessCountDesc" resultMap="BaseResultMap"&amp;gt;-->
+    <!--select-->
+    <!--&amp;lt;include refid="Base_Column_List"/&amp;gt;-->
+    <!--from singer-->
+    <!--where-->
+    <!--&amp;lt;if test="singerStatus != null"&amp;gt;-->
+      <!--and singer_status=#{singerStatus,jdbcType=INTEGER}-->
+    <!--&amp;lt;/if&amp;gt;-->
+    <!--order by access_count desc-->
+  <!--&amp;lt;/select&amp;gt;-->
+
+<!--auto generated by MybatisCodeHelper on 2019-08-29-->
+  <select id="findAllBySingerStatus" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from singer
+    where 1=1
+    <if test="singerStatus != null">
+      and singer_status=#{singerStatus,jdbcType=INTEGER}
+    </if>
+  </select>
+    <select id="searchSinger" resultMap="BaseResultMap">
+      select
+      <include refid="Base_Column_List" />
+   from singer where singer_name like '%${Keyword}%'
+    </select>
+    <select id="findMySinger" resultMap="BaseResultMap">
+      select
+      <include refid="Base_Column_List" />
+   from singer where singer_id in (select singer_id from userwithsinger where user_id=#{userId,jdbcType=VARCHAR})
+    </select>
+    <insert id="followSinger" keyColumn="user_singer_id" keyProperty="userSingerId">
+      insert into userwithsinger
+      (user_singer_id,user_id, singer_id) value (#{singerId,jdbcType=INTEGER},#{userId,jdbcType=VARCHAR},#{singerId,jdbcType=INTEGER})
+    </insert>
+  <select id="findBySingerAndUserId" resultType="netonemusic.com.entity.UserwithSinger">
+    select * from userwithsinger
+    where user_id=#{userId,jdbcType=VARCHAR} and singer_id=#{singerId,jdbcType=INTEGER}
+  </select>
+
+<!--auto generated by MybatisCodeHelper on 2019-09-10-->
+  <select id="findBySingerTypeOrderByAccessCountDesc" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from singer
+        where singer_type=#{singerType,jdbcType=VARCHAR} order by access_count desc
+    </select>
+</mapper>

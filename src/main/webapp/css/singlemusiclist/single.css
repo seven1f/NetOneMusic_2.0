@@ -1,0 +1,430 @@
+.m-main {
+    width: 980px;
+    height: 3000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.m-main .m-main-side {
+    float: right;
+    width: 239px;
+    height: 100%;
+    border-right: 1px solid #D3D3D3;
+    background-color: #ffffff;
+    border-left-width: 0px;
+
+}
+.m-main .m-main-content {
+    float: left;
+    position: relative;
+    width: 738px;
+    height: 100%;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    background-color: #fff;
+}
+.m-main .m-main-content .content-bsb {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    right: 30px;
+    width: 668px;
+    height: 1784px;
+    /*background-color: pink;*/
+}
+.m-main-content .content-bsb .bsb-t-content .txt {
+    position: relative;
+    top: 0;
+    left: 50px;
+    font-size: 15px;
+    color: #ccc;
+}
+.m-main-content .content-bsb .content-bsb-top {
+    position: relative;
+    width: 670px;
+}
+.m-main-content .content-bsb .content-bsb-top {
+    position: absolute;
+    width: 670px;
+}
+.m-main-content .content-bsb .bsb-t-content {
+    position: absolute;
+    left: 182px;
+    width: 402px;
+    height: unset;
+}
+.m-main-content .content-bsb .bsb-t-logo {
+    position: absolute;
+    padding: 4px;
+    width: 148px;
+    border: 1px solid #ccc;
+}
+.m-main-content .content-bsb .bsb-t-content p {
+    position: absolute;
+    top: 10px;
+    font-size: 22px;
+    color: #000;
+}
+.m-main-content .content-bsb .bsb-t-content span {
+    position: absolute;
+    width: 230px;
+    font-size: 12px;
+    top: 37px;
+    color: #666;
+}
+.m-main-content .content-bsb .bsb-t-btns {
+    position: relative;
+    bottom: 28px;
+    width: 402px;
+    height: 30px;
+}
+p#introduction{
+    font-size: 14px;
+    margin-top: 115px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:4;
+
+}
+.left{float: left} .right{float: right}
+.mg5{margin: 5px} .pd5{padding: 5px}
+                  .mr15{margin-right: 15px}
+.mt10{margin-top: 10px} .mt15{margin-top: 15px}
+
+
+
+
+.section2{
+    width: 100%;
+    height: auto;
+    background: #f5f5f5;
+}
+.wrap2{
+    background: #fff;
+    width: 982px;
+    height:auto;
+    min-height: 1000px;
+    margin: 0 auto;
+    border: 1px solid #d3d3d3;
+    border-top: none;
+    overflow:hidden;
+}
+.wrap22{
+    width: 980px;
+}
+.main{
+    float: left;
+    width: 709px;
+    border-right: 1px solid #dad1d1
+}
+
+.mainh{
+    height: 53px;
+    padding: 10px 0px;
+    border-bottom: 2px solid #c10d0c;
+    font-size:12px;
+}
+
+ .btns11 {
+    position:absolute;
+    width: 63px;
+    height: 28px;
+    text-indent: 35px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #fff;
+    border: 1px solid #2E6AA4;
+    border-radius: 3px 0 0 3px;
+    background: url(../../img/rankimg/button2.png) 0 -806px;
+}
+ .btns11:hover {
+    background: url(../../img/rankimg/button2.png) 0px -720px;
+}
+ .btns21 {
+    position:absolute;
+    left: 65px;
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #2E6AA4;
+    border-radius: 0 3px 3px 0;
+    line-height: 30px;
+    background: url(../../img/rankimg/button2.png) -80px -806px;
+}
+ .btns21:hover {
+    background: url(../../img/rankimg/button2.png) -80px -719px;
+}
+ .btns31 {
+     position:absolute;
+    left: 100px;
+    width: 82px;
+    height: 28px;
+    line-height: 28px;
+    text-indent: 27px;
+    color: #000;
+    border: 1px solid #C3C3C3;
+    border-radius: 5px;
+    background-color: #FDFDFD;
+    background: url(../../img/rankimg/button2.png) -1px -978px;
+}
+ .btns31:hover {
+    background: url(../../img/rankimg/button2.png) -1px -1063px;
+}
+ .btns41 {
+     position:absolute;
+    left: 190px;
+    width: 68px;
+    height: 28px;
+    line-height: 28px;
+    text-indent: 27px;
+    color: #000;
+    border: 1px solid #C3C3C3;
+    border-radius: 5px;
+    background-color: #FDFDFD;
+    background: url(../../img/rankimg/button2.png) -1px -1226px;
+}
+ .btns41:hover {
+    background: url(../../img/rankimg/button2.png) -1px -1268px;
+}
+ .btns51 {
+     position:absolute;
+    left: 266px;
+    width: 58px;
+    height: 28px;
+    line-height: 28px;
+    text-indent: 27px;
+    color: #000;
+    border: 1px solid #C3C3C3;
+    border-radius: 5px;
+    background-color: #FDFDFD;
+    background: url(../../img/rankimg/button2.png) -1px -2762px;
+}
+ .btns51:hover {
+    background: url(../../img/rankimg/button2.png) -1px -2805px;
+}
+ .btns61 {
+     position:absolute;
+    top: 0;
+    left: 330px;
+    width: 76px;
+    height: 28px;
+    line-height: 28px;
+    text-indent: 27px;
+    color: #000;
+    border: 1px solid #C3C3C3;
+    border-radius: 5px;
+    background-color: #FDFDFD;
+    background: url(../../img/rankimg/button2.png) -1px -1466px;
+}
+ .btns61:hover {
+    background: url(../../img/rankimg/button2.png) -1px -1508px;
+}
+.lilogo{
+    float: left;
+    padding: 0;
+    margin: 25px 0 0px 0;
+}
+.lilogo a{
+    font: 24px "宋体";
+    color: #000;
+    margin: 0 6px 0 0;
+}
+.center-head{
+    display: inline;
+    width: 668px;
+    height: 36px;
+    /*background: url(../../img/rankimg/button2.png) -2px -1810px;*/
+}
+.head1{
+    float: left;
+    width: 76px;
+    height: 34px;
+    border: 1px solid #ccc;
+    background-color: #F0F0F0;
+}
+.head2{
+    float: left;
+    left: 78px;
+    width: 376px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #ccc;
+    text-indent: 10px;
+    font-size: 12px;
+    color: #666666;
+    background-color: #F0F0F0;
+}
+.head3{
+    float: left;
+    right: 92px;
+    width: 90px;
+    height: 34px;
+    line-height: 34px;
+    text-indent: 10px;
+    font-size: 12px;
+    color: #666666;
+    border: 1px solid #ccc;
+    background-color: #F0F0F0;
+}
+.head4{
+    float: left;
+    right: 0px;
+    width: 90px;
+    height: 34px;
+    text-indent: 10px;
+    font-size: 12px;
+    line-height: 34px;
+    color: #666666;
+    border: 1px solid #ccc;
+    background-color: #F0F0F0;
+}
+.remarkinput{
+    margin-top: 10px; margin-left: 550px;
+    width: 50px;height: 30px;
+    border: grey;
+}
+
+.remarkmain{
+    width: 640px;
+    margin-top: 20px;
+}
+.remarkmain h3{
+    font-size: 20px;
+   margin-bottom: 10px;
+}
+.remark{
+    border-top:1px dotted #ccc ;
+    width: 640px;
+    padding: 15px 0 15px 0;
+}
+.remark .head{
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: -100px;
+}
+.remark .head image{
+    width: 50px;
+    height: 50px;
+}
+.cntwrap{
+    width: 580px;
+    margin-left: 60px;
+}
+.cntwrap .f-brk{
+    width: 580px;
+}
+.cntwrap .f-brk a{
+    color: #0c77c5;
+}
+
+
+
+
+/*歌曲table样式*/
+.musicrank{
+    width: 640px;
+}
+.musicrank table tr{
+    height: 30px;
+    font-size: 12px;
+    border: none;
+}
+.musicrank table tr th{
+    border: none;
+}
+.musicrank table tr td{
+    border: none;
+}
+
+.first1{
+    width: 73px;
+    height: 34px;
+    background-color: #F0F0F0;
+    border: 1px solid #ccc;
+    padding: 8px 10px 10px 8px;
+}
+.first2{
+    width: 237px;
+    height: 34px;
+    background-color: #F0F0F0;
+    border: 1px solid #ccc;
+    padding: 8px 10px 10px 8px;
+}
+.first3{
+    width: 111px;
+    height: 34px;
+    background-color: #F0F0F0;
+    border: 1px solid #ccc;
+    padding: 8px 10px 10px 8px;
+}
+.first4{
+    width: 89px;
+    height: 34px;
+    background-color: #F0F0F0;
+    border: 1px solid #ccc;
+    padding: 8px 10px 10px 8px;
+}
+.first5{
+    width: 127px;
+    height: 34px;
+    background-color: #F0F0F0;
+    border: 1px solid #ccc;
+    padding: 8px 10px 10px 8px;
+}
+.even{
+    width: 639px;
+    height: 30px;
+    border-right: 1px solid #F0F0F0;
+}
+.hd .palybnt{
+    float: right;
+    top: 28px;
+    left: 62px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background: url(../../img/rankimg/button2.png) -14px -897px;
+}
+.hd .num{
+    margin-left: 5px;
+}
+
+/*模态框样式*/
+.mySonglistUl{
+    width: 478px;
+    height: auto;
+}
+.mySonglistUl li{
+    padding: 6px 0px 6px 35px;
+    border-bottom: 1px solid #ddd;
+}
+.mySonglistUl li .songlist{
+    padding-left: 50px;
+    width: 376px;
+    height: 40px;
+}
+.songlist .left{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: -50px;
+}
+.songlist .left a img{
+    width: 40px;
+    height: 40px;
+}
+.mySonglistUl .songlistname{
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+
+
+
+
+
+

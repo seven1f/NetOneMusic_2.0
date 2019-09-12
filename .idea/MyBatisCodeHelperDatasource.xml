@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="genSqlFilePath" value="$PROJECT_DIR$/src/main/java/netonemusic/com/entity" />
+        <option name="generateService" value="true" />
+        <option name="generateServiceInterface" value="true" />
+        <option name="javaMapperPackage" value="netonemusic.com.dao" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/src/main/java" />
+        <option name="javaModelPackage" value="netonemusic.com.entity" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="NetOneMusic_2.0" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="NetOneMusic_2.0">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="netonemusic.com.dao" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="javaModelPacakge" value="netonemusic.com.entity" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="netonemusic.com.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="javaServicePackage" value="netonemusic.com.service.impl" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/src/main/java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/src/main/resource" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="netonemusic:cd">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="cd_id" />
+                  <option name="javaModelName" value="Cd" />
+                  <option name="moduleName" value="NetOneMusic_2.0" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="netonemusic:singer">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="singer_id" />
+                  <option name="javaModelName" value="Singer" />
+                  <option name="moduleName" value="NetOneMusic_2.0" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="netonemusic:song">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="song_id" />
+                  <option name="javaModelName" value="Song" />
+                  <option name="moduleName" value="NetOneMusic_2.0" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="netonemusic:songlist">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="songList_id" />
+                  <option name="javaModelName" value="Songlist" />
+                  <option name="moduleName" value="NetOneMusic_2.0" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="netonemusic:songlistwithsong">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="sl_song_id" />
+                  <option name="javaModelName" value="Songlistwithsong" />
+                  <option name="moduleName" value="NetOneMusic_2.0" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="netonemusic:student">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="Student" />
+                  <option name="moduleName" value="NetOneMusic_2.0" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="netonemusic:user">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="user_id" />
+                  <option name="javaModelName" value="User" />
+                  <option name="moduleName" value="NetOneMusic_2.0" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="netonemusic:userwithsonglist">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="user_songlist_id" />
+                  <option name="javaModelName" value="Userwithsonglist" />
+                  <option name="moduleName" value="NetOneMusic_2.0" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="xmlMapperPackage" value="mapper" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/src/main/resource" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,218 @@
+.section2{
+    width: 100%;
+    height: auto;
+    background: #f5f5f5;
+}
+.wrap2{
+    background: #fff;
+    width: 982px;
+    height:auto;
+    min-height: 1000px;
+    margin: 0 auto;
+    border: 1px solid #d3d3d3;
+    border-top: none;
+    overflow:hidden;
+}
+.wrap22{
+    width: 980px;
+}
+.main{
+    float: left;
+    width: 709px;
+    border-right: 1px solid #dad1d1
+}
+
+.mainh{
+    height: 53px;
+    padding: 10px 0px;
+    border-bottom: 2px solid #c10d0c;
+    font-size:12px;
+}
+.singerhead{
+    position: relative;
+    width: 640px;
+    margin-top: -20px;
+}
+.singerhead h2{
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+.singerhead img{
+    width: 640px;
+    height: 300px;
+}
+.popularmusic{
+    width: 640px;
+}
+.popularmusic .heard{
+    margin-top: 20px;
+    height: 31px;
+    margin-bottom: 10px;
+    position: relative
+}
+
+.btns11 {
+    position:absolute;
+    width: 63px;
+    height: 28px;
+    text-indent: 35px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #fff;
+    border: 1px solid #2E6AA4;
+    border-radius: 3px 0 0 3px;
+    background: url(../../img/rankimg/button2.png) 0 -806px;
+}
+.btns11:hover {
+    background: url(../../img/rankimg/button2.png) 0px -720px;
+}
+.btns21 {
+    position:absolute;
+    left: 65px;
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #2E6AA4;
+    border-radius: 0 3px 3px 0;
+    line-height: 30px;
+    background: url(../../img/rankimg/button2.png) -80px -806px;
+}
+.btns21:hover {
+    background: url(../../img/rankimg/button2.png) -80px -719px;
+}
+.btns31 {
+    position:absolute;
+    left: 100px;
+    width: 82px;
+    height: 28px;
+    line-height: 28px;
+    text-indent: 27px;
+    color: #000;
+    border: 1px solid #C3C3C3;
+    border-radius: 5px;
+    background-color: #FDFDFD;
+    background: url(../../img/rankimg/button2.png) -1px -978px;
+}
+.btns31:hover {
+    background: url(../../img/rankimg/button2.png) -1px -1063px;
+}
+.musicrank{
+    width: 640px;
+    font-size: 12px;
+    color: #c2c2c2;
+}
+.heard1{
+    width: 94px;
+    padding: 8px;
+}
+.palybnt{
+    float: right;
+    top: 28px;
+    left: 62px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background: url(../../img/rankimg/button2.png) -14px -897px;
+}
+.heard2{
+    width: 329px;
+    padding: 8px;
+}
+.musicrank table tr{
+    height: 30px;
+    font-size: 12px;
+    border: none;
+
+}
+.musicrank table tr th{
+    border: none;
+}
+.musicrank table tr td{
+    border: none;
+}
+
+.allrecord{
+    width: 640px;
+    display: none;
+}
+.allrecord ul{
+    width: 658px;
+    height: 615px;
+    margin-left: -18px;
+    margin-top: 20px;
+}
+.allrecord ul li{
+    width: 163px;
+    height: 205px;
+    float: left;
+    padding: 0px 0px 30px 18px;
+}
+.allrecord ul li p{
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 3px;
+}
+.allrecord ul li  span{
+    font-size: 12px;
+    color: #c2c2c2;
+}
+
+.introduction{
+    width: 640px;
+    display: none;
+}
+.introduction h2{
+    padding-left: 15px;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    height: 19px;
+    font-size: 15px;
+    border-left: 3px solid  ;
+}
+.introduction p{
+    line-height: 25px;
+    color: #666;
+    text-indent: 2em;
+    font-size: 12px;
+}
+.similar{
+    width: 270px;
+    margin-left: 709px
+}
+.similar .singer{
+    padding:20px 40px 40px 30px ;
+}
+.similar .singer h3{
+    padding-bottom: 10px;
+    font-size: 15px;
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+}
+.similar .singer ul{
+    width: 225px;
+    height: 184px;
+    margin-left: -25px;
+}
+.similar .singer ul li{
+    float: left;
+    padding-left: 25px;
+    width: 75px;
+    height: 92px;
+}
+.similar .singer ul li p{
+    margin-top: 10px;
+}
+.similar .singer ul li p span{
+    margin: 6px;
+    font-size: 10px;
+    color: #2a2a2a;
+}
+.similar .singer ul li img{
+    width: 50px;
+    height: 50px;
+}
+
+
+

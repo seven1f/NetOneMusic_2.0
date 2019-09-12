@@ -1,0 +1,196 @@
+.section2{
+    width: 100%;
+    height: auto;
+    background: #f5f5f5;
+}
+.wrap2{
+    background: #fff;
+    width: 982px;
+    height:auto;
+    min-height: 1000px;
+    margin: 0 auto;
+    border: 1px solid #d3d3d3;
+    border-top: none;
+    overflow:hidden;
+}
+.wrap22 {
+    width: 980px;
+    padding: 40px;
+}
+.m-search{
+    width: 900px;
+    height:auto;
+}
+.search-title{
+    margin-top: 28px;
+    margin-bottom: 17px;
+    font-size: 12px;
+    color: #999;
+}
+.single-result{
+    margin-top: 20px;
+    width: 900px;
+}
+.musicrank{
+    width: 900px;
+    font-size: 12px;
+    color: #c2c2c2;
+}
+.heard1{
+    width: 94px;
+    padding: 8px;
+}
+.palybnt{
+    float: right;
+    top: 28px;
+    left: 62px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background: url(../../img/rankimg/button2.png) -14px -897px;
+}
+.heard2{
+    width: 350px;
+    padding: 8px;
+}
+.musicrank table tr{
+    height: 30px;
+    font-size: 12px;
+    border: none;
+}
+.head3{
+    width: 130px;
+}
+.musicrank table tr th{
+    border: none;
+}
+.musicrank table tr td{
+    border: none;
+}
+.singer-result{
+    margin-top: 20px;
+    height: auto;
+}
+.singer-result.singers{
+    width: 924px;
+    height: auto;
+    margin-left: -24px;
+}
+.singers-li {
+    float: left;
+    width: 154px;
+    height: 160px;
+    padding: 0px 0px 30px 24px;
+}
+.singers-li p{
+    margin-top: 8px;
+}
+.singer-img a img {
+    border: 1px solid #c2c2c24a;
+    width: 130px;
+    height: 130px;
+}
+/*.singers-li span{*/
+    /*margin-top: 5px;*/
+/*}*/
+/*.singers-li i{*/
+    /*padding-top: 5px;*/
+    /*display: inline-block;*/
+    /*width: 16px;*/
+    /*height: 16px;*/
+    /*margin-left: 4px;*/
+    /*background: url('../../img/singerimg/icon.png') 0 -740px no-repeat;*/
+/*}*/
+
+.songlist-result{
+    margin-top: 20px;
+    height: auto;
+}
+.songlists{
+    border: none;
+    width: 900px;
+    font-size: 12px;
+    color: #c2c2c2;
+}
+.table > tbody > tr > td.songlist-tr{
+
+    border: none;
+    height: 62px;
+    width: 900px;
+}
+.table > tbody > tr > td.songlist-heard1{
+    width: 45px;
+    height: 62px;
+    padding-top: 20px;
+}
+.palybnt2{
+    float:left;
+    margin-left: 10px;
+    top: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background: url(../../img/rankimg/button2.png) -14px -897px;
+}
+.table > tbody > tr > td.songlist-heard2{
+    width: 45px;
+    height: 62px;
+    padding: 5px 10px 5px 10px;
+}
+.songlist-heard2 img{
+    width: 50px;
+    height: 50px;
+}
+.table > tbody > tr > td.songlist-heard3{
+    width: 327px;
+    font-size: 12px;
+    color: #333;
+    padding: 22px 10px 10px 10px;
+}
+.table > tbody > tr > td.songlist-heard4{
+    width: 100px;
+    font-size: 12px;
+    color: #333;
+    padding: 22px 10px 10px 10px;
+}
+.user-result .users{
+    margin-top: 20px;
+    width: 900px;
+    font-size: 12px;
+}
+.user-result .users-tr{
+    width: 900px;
+    height: 62px;
+}
+.user-result .users tr .user-img{
+    width: 71px;
+    padding: 5px 10px 5px 10px;
+}
+.user-result .user-msg{
+    width: 480px;
+}
+.user-result .users tr .user-img img{
+    border: 1px solid #bbb;
+    width: 50px;
+    height: 50px;
+}
+.user-result .users tr .user-msg{
+    padding: 5px 10px 5px 10px;
+}
+.user-result .users tr .user-msg .name{
+    font-size: 15px;
+}
+.user-result .users tr .user-msg .sign{
+    font-size: 13px;
+    color: #c2c2c2;
+}
+.user-result .users tr .follow-bnt{
+    width: 136px;
+    padding: 5px 10px 5px 10px;
+}
+
+
+
+
+
+
