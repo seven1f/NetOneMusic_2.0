@@ -20,8 +20,7 @@
 ![](https://github.com/seven1f/project-gif/blob/master/images/%E6%94%B6%E8%97%8F%E6%AD%8C%E5%8D%95.gif)
 
 ### 查看歌手
-![](https://github.com/seven1f/project-gif/blob/master/images/%E6%9F%A5%E7%9C%8B%E6%AD%8C%E6%89%8B.gif)https://github.com/seven1f/project-gif/blob/master/images/%E6%
-9F%A5%E7%9C%8B%E6%AD%8C%E6%89%8B.gif
+![](https://github.com/seven1f/project-gif/blob/master/images/%E6%9F%A5%E7%9C%8B%E6%AD%8C%E6%89%8B.gif)
 
 ### 查看关注歌手
 ![](https://github.com/seven1f/project-gif/blob/master/images/%E6%9F%A5%E7%9C%8B%E5%85%B3%E6%B3%A8%E6%AD%8C%E6%89%8B.gif)
